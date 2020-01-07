@@ -12,6 +12,7 @@ class App < Sinatra::Base
 
   post "/puppy" do 
     @puppy = Puppy.new(params['name'], params['breed'], params['months_old'])
+     binding.pry
      erb :display_puppy
   end
 
